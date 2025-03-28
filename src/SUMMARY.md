@@ -7,3 +7,5 @@
   - [Project Setup](./setup.md)
   - [Connections](./connections.md)
   - [Fundamentals Struct/Traits](./fundamentals.md)
+
+- [Models](./models.md)

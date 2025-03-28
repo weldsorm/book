@@ -4,7 +4,7 @@ Before diving to deep into Welds, there are a couple constructs you should be aw
 These are the four most common things you will see when interacting with Welds.
 
 Infact, This is what is included when you add the line.
-```
+```rust
 use welds::prelude::*;
 ```
 which you should do.

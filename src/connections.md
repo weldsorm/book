@@ -6,7 +6,7 @@ Connections in welds are done using the crate `welds-connections`. This crate is
 You can create a database client for a specific database backend, but generally It is recommended to use the generic connection that supports whatever backends you have enabled.
 To do this you make a call into welds connections passing a connection_string.
 
-```
+```rust
 let connection_string = "sqlite::./database.sqlite";
 let client = welds::connections::connect(connection_string).await?;
 ```

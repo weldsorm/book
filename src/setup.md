@@ -10,19 +10,19 @@ This has been left up to you because these library support multiple async backen
 You can also add more features as you need, but a couple simple example would be:
 
 ### Welds compiled for Sqlite
-```
+```bash
 cargo add welds --features="sqlite"
 cargo add sqlx --features="runtime-tokio"
 ```
 
 ### Welds compiled for Postgres
-```
+```bash
 cargo add welds --features="postgres"
 cargo add sqlx --features="runtime-tokio,tls-rustls"
 ```
 
 ### Welds compiled for Microsoft Sql Server
-```
+```bash
 cargo add welds --features="mssql"
 cargo add tiberius
 ```
@@ -30,7 +30,7 @@ cargo add tiberius
 For external extra types you will need to enable them in the underlying database driver.
 
 ### Welds compiled for Sqlite with chrono support
-```
+```bash
 cargo add welds --features="sqlite"
 cargo add sqlx --features="runtime-tokio,chrono"
 ```
@@ -39,10 +39,10 @@ cargo add sqlx --features="runtime-tokio,chrono"
 For external extra types with Mssql you will need to enable them in welds-connections too.
 
 ### Welds compiled for Sqlite and Microsoft Sql Server with chrono and uuid support
-```
+```bash
 cargo add welds --features="sqlite,mssql"
 cargo add sqlx --features="runtime-tokio,chrono,uuid"
-cargo add tiberius --features=chrono
-cargo add welds-connections --features=mssql,sqlite,mssql-chrono
+cargo add tiberius --features="chrono"
+cargo add welds-connections --features="mssql,sqlite,mssql-chrono"
 ```
 
