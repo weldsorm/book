@@ -4,7 +4,8 @@ by Lex Childs, with contributions from the Rust Community
 
 This version of the text is for the latest stable version of the Welds ORM library.
 
-This source for this book is hosted on github at.
+The source for this book is hosted on github at [https://github.com/weldsorm/book](https://github.com/weldsorm/book). 
+Contributions to this book are very welcome and appreciated. Clarifying a single poorly worded sentence can make a big difference to the people who read this book after you.
 
 Welds Supports
 - Sqlite

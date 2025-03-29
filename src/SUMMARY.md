@@ -13,7 +13,7 @@
   - [Whats Added To your Model](./model_extras.md)
   - [Model Operations (Create/Edit/Delete)](./data_from_db.md)
   - [Hooks](./model_hooks.md)
-  - [Custom Field Types](./model_custom_types.md)
+  # - [Custom Field Types](./model_custom_types.md)
 
 - [Query](./query.md)
   - [Basic](./query_basic.md)
