@@ -33,6 +33,12 @@ Saving can always be done by calling. `save()`.
 Save will create or update based on the states knowledge of what is in the database.
 Additionally `delete` can be called to execute a SQL delete command.
 
+```rust
+let mut pet: DbState<Pet> = Pet::find_by_id(42).run(&client).await?;
+give_dog_treat(&pet);
+pet.save(&client).await?;
+```
+
 <br/>
 <br/>
 <br/>
