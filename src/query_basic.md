@@ -1,4 +1,4 @@
-# Basic
+# Basic - (single table query)
 
 ## Overview
 
@@ -29,8 +29,9 @@ as `equal`, `not_equal`, `lt`, `lte`, `gt`, `gte`, `like`, etc. These filters ar
 Usage:
 ```rust
 let query = Product::all()
-    .where_col(|p| p.active.eq(true))
-    .where_col(|p| p.name.like("%Cookie%"));
+    .where_col(|p| p.active.equal(true))
+    .where_col(|p| p.name.like("%Cookie%"))
+    .where_col(|p| p.price.not_equal(None));
 ```
 
 #### List of filters by types:
