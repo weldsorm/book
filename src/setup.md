@@ -7,7 +7,7 @@ These are enabled as features on the Welds crate.
 You will also need to setup `SQLx` or `Tiberius` as well. `Tiberius` for Microsoft SQL Server and SQLx for the other backends.
 This has been left up to you because these library support multiple async backends and you need to pick which one to use.
 
-You can also add more features as you need, but a couple simple example would be:
+You can also add more features as you need, but a couple simple examples would be:
 
 ### Welds compiled for Sqlite
 ```bash
@@ -35,7 +35,7 @@ cargo add welds --features="sqlite"
 cargo add sqlx --features="runtime-tokio,chrono"
 ```
 
-## 
+##
 For external extra types with Mssql you will need to enable them in welds-connections too.
 
 ### Welds compiled for Sqlite and Microsoft Sql Server with chrono and uuid support

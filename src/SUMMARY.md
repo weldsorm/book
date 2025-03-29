@@ -9,9 +9,9 @@
 
 - [Models](./models.md)
   - [Attributes](./model_attributes.md)
-  - [Relationships](./model_relationships.md)
   - [Whats Added To your Model](./model_extras.md)
   - [DbState (Create/Edit/Delete)](./model_state.md)
+  - [Relationships](./model_relationships.md)
   - [Hooks](./model_hooks.md)
   # - [Custom Field Types](./model_custom_types.md)
 
@@ -23,7 +23,7 @@
   - [Raw SQL](./query_raw.md)
   - [Scopes](./query_scopes.md)
 
-- [Bulk](./bulk.md)
+- [Bulk Operations](./bulk.md)
   - [Insert](./bulk_insert.md)
   - [Update](./bulk_update.md)
 
