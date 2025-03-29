@@ -78,6 +78,8 @@ Typical Use Case:
 
 Purpose: Returns a query (un-executed) of a filtered set of rows in the table.
 
+[You can read a detailed explanation of basic queries here](./query_basic.md)
+
 Usage:
 ```rust
 let query = YourModel::where_col(|col| col.name.equal("some_name"));
@@ -125,6 +127,8 @@ Typical Use Cases:
 
 Purpose: Starts a customizable “select” query builder for this model.
 This is used to return a sub-set of your columns on your model. You can also start a "select" query off of any query such as where_col.
+
+[You can read a detailed explanation of select queries here](./query_select.md)
 
 ***NOTE: You will want a second model that represents your subset of columns***
 

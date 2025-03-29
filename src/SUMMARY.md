@@ -18,8 +18,8 @@
 - [Query](./query.md)
   - [Basic](./query_basic.md)
   - [Advanced](./query_advanced.md)
-  - [Custom Select](./query_select.md)
-  - [Custom SQL](./query_sql.md)
+  - [Custom Select (Columns & Joins)](./query_select.md)
+  - [Manual SQL](./query_sql.md)
   - [Raw SQL](./query_raw.md)
   - [Scopes](./query_scopes.md)
 
