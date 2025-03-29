@@ -11,7 +11,7 @@
   - [Attributes](./model_attributes.md)
   - [Relationships](./model_relationships.md)
   - [Whats Added To your Model](./model_extras.md)
-  - [Model Operations (Create/Edit/Delete)](./data_from_db.md)
+  - [DbState (Create/Edit/Delete)](./model_state.md)
   - [Hooks](./model_hooks.md)
   # - [Custom Field Types](./model_custom_types.md)
 
