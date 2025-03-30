@@ -21,7 +21,7 @@
   - [Advanced](./query_advanced.md)
   - [Custom Select (Columns & Joins)](./query_select.md)
   - [Manual SQL](./query_sql.md)
-  # - [Raw SQL](./query_raw.md)
+  - [Raw SQL](./query_raw.md)
   # - [Include](./query_include.md)
   # - [Scopes](./query_scopes.md)
   # - [Bulk Operations](./bulk.md)
