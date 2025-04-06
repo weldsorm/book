@@ -37,9 +37,7 @@ It is nice in that it makes your code cleaner to read.
 ```rust
     let q = Product::where_col(|x| x.name.ilike("% - discontinued") );
 
-    q.set(|o| o.hidden, true).run(&client).await?;
-    // or
-    q.set_col(|o| o.hidden.equal(true) ).run(&client).await?;
+    q.set_null(|p| p.category).run(&client).await?;
 
 ```
 
