@@ -33,7 +33,7 @@ NOTE: transactions are automatically rolled back unless you call `commit()`
 This is a wrapper around your model. While you might not use this struct directly, it is what is returned to you from a database query. It works very similar to `std::sync::MutexGuard`, transparently giving you access to the model inside.
 It is used by welds to keep track of the changes you make to your model so Welds can create or update it in the database.
 
-If you are finished with Welds and just want your vanilla model back, you can call `into_inner` or `into_vm` to get to the inner object.
+If you are finished with Welds and just want your vanilla model back, you can call `into_inner()` or `into_vm()` to get to the inner object, or if you have a vec of state objects you can call `into_inners()`.
 
 ## WeldsModel
 
