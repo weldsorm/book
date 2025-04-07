@@ -17,10 +17,6 @@ For example:
 ```
 
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
 ### 1. BelongsTo
 
@@ -48,10 +44,6 @@ pub struct Player {
 ```
     The Player model has a team_id field referencing a Team record’s primary key.
 
-<br/>
-<br/>
-<br/>
-<br/>
 <br/>
 
 ### 2. HasMany
@@ -81,7 +73,46 @@ pub struct Team {
     The Team model can have many Player records, each storing team_id.
 
 <br/>
+
+### 3. HasOne
+
+```rust
+#[welds(HasOne(image, Image, "user_id"))]
+```
+
+Use HasOne when the association is singular and the other model holds the foreign key. 
+
+- **Name** (first parameter): The name of the relationship (e.g., image).
+- **Target model** (second parameter): The child model (e.g., Image).
+- **Foreign key** (third parameter): The column on the child model that references this model’s primary key (e.g., "user_id").
+
+Example use case where a User has one image:
+
+```rust
+#[derive(welds::WeldsModel)]
+#[welds(table = "users")]
+#[welds(HasOne(image, Image, "user_id"))]
+pub struct User {
+    #[welds(primary_key)]
+    pub id: i32,
+    pub name: String,
+}
+```
+
+```rust
+#[derive(welds::WeldsModel)]
+#[welds(table = "images")]
+#[welds(BelongsTo(user, User, "user_id"))]
+pub struct Image {
+    #[welds(primary_key)]
+    pub id: i32,
+    pub user_id: i32,
+    pub url: String,
+}
+```
+
+    A User has one Image, the Image BelongsTo the User and holds the foreign key.
+
 <br/>
-<br/>
-<br/>
-<br/>
+
+
