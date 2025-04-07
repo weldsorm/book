@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "The Welds Book"
+
+[output.html]
+git-repository-url = "https://github.com/weldsorm/book"
+edit-url-template = "https://github.com/weldsorm/book/edit/main/src/{path}"
