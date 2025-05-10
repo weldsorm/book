@@ -6,6 +6,7 @@
   - [Project Setup](./setup.md)
   - [Fundamentals Struct/Traits](./fundamentals.md)
   - [Connections](./connections.md)
+  - [Tools](./external_tools.md)
   # - [Transactions](./transactions.md)
 
 - [Models](./models.md)
