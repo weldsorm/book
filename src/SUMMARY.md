@@ -24,7 +24,7 @@
   - [Include](./query_include.md)
   - [Manual SQL](./query_sql.md)
   - [Raw SQL](./query_raw.md)
-  # - [Scopes](./query_scopes.md)
+  - [Scopes](./query_scopes.md)
 
 - [Bulk Operations](./bulk.md)
   - [Insert](./bulk_insert.md)
