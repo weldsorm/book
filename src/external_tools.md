@@ -17,9 +17,9 @@ cargo install gumbo
 export DATABASE_URL=sqlite://./dev.sqlite
 ```
 
-You can initialize a basic empty shell of a welds project with the `init` command 
-
 ## Project Setup
+
+You can initialize a basic empty welds project with the `init` command
 
 ```bash
 gumbo init --welds-only project_name

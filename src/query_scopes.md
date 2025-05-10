@@ -1,12 +1,12 @@
 # Scopes
 
-Welds supports name scope to help abstract away complicated queries.
+Welds supports name scopes to help abstract away complicated queries.
 
 ## Introduction
 
-Often when working with a data in a database there is a need to re-use filters.
+Often when working with data in a database there is a need to reuse filters.
 This can be useful to keep complicated logic in a single location.
-Welds provide a nice mechanism to write re-usually snippits of queries.
+Welds provides a nice mechanism to write reusable snippets of queries.
 
 ## How to write a scope 
 
