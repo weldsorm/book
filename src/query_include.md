@@ -135,5 +135,16 @@ The accessed data is wrapped in a special accessor struct that knows how to look
 ```
 
 
+## Filter sub models
 
+If you are interested in fetching a subset of the included models, this can be achieved using `include_where`.
+`include_where` works just like include but an included filter is applied to the child model.
 
+```rust
+    use welds::dataset::DataSet;
+
+    let set: DataSet<FoodCategory> = FoodCategory::all()
+        .include_where(|c| t.food, Food::where_col(|f| f.deleted.equal(false)))
+        .run(client.as_ref())
+        .await?;
+```
