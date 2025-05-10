@@ -20,6 +20,7 @@
   - [Basic](./query_basic.md)
   - [Advanced](./query_advanced.md)
   - [Custom Select (Columns & Joins)](./query_select.md)
+  - [Aggregate Functions (Group By)](./group_by.md)
   - [Include](./query_include.md)
   - [Manual SQL](./query_sql.md)
   - [Raw SQL](./query_raw.md)
