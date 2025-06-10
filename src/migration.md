@@ -133,8 +133,8 @@ use welds::migrations::prelude::*;
 use welds::migrations::Manual;
 
 fn step(state: &TableState) -> Result<MigrationStep> {
-    let m = Manual::up("DROP TABLE dogs")
-        .down("CREATE TABLE dogs ( id SERIAL PRIMARY KEY )");
+    let m = Manual::up("CREATE TABLE dogs ( id SERIAL PRIMARY KEY )")
+        .down("DROP TABLE dogs");
     Ok(MigrationStep::new("m20250210064357_manual_dogs", m))
 }
 ```

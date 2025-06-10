@@ -44,7 +44,7 @@ Things to notice:
 1) The column `id` is marked as a `primary_key`. Typically in welds
 if the primary_key field is `Default::default()` it is ignored when inserting.
 Here in Bulk insert the primary_key is ***ALWAYS*** ignored.
-If you want to insert a primary_key column, you will need to make a new model struct and NOT mark the primary_key as primary_key
+If you want to insert a primary_key column, you can use the method: `welds::query::insert::bulk_insert_with_ids`
 2) DbState is not used with bulk operations
 
 You can now insert your data with a call to `bulk_insert`
