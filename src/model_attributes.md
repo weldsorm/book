@@ -66,7 +66,7 @@ Add This to a field when the field's name doesn't match the name in the database
 
 ### Ignore
 ```
-//  #[welds(ignore)]
+#[welds(ignore)]
 ```
 Sometimes you need to have a little extra state or other stuff attached to your model.
 This tells welds that this field has nothing to do with the database and should be ignored.

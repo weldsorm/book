@@ -9,11 +9,13 @@ You can chain methods such as where_col(), order_by_asc(), and others to build i
 
 ## Executing Queries
 
-Welds queries don't run in the database until you call `run` or `count`.
+Welds queries don't run in the database until you call `run`, `count` or `fetch_one`.
 These calls build the required SQL, execute it in the database, and returns the corresponding data.
 ```rust
 let row_count = Model::all().count(client.as_ref()).await?;
 let models = Model::all().run(client.as_ref()).await?;
+// short hand for `.limit(1).run(..)` returning a single model or WeldError is not found
+let model = Model::all().fetch_one(client.as_ref()).await?; 
 ```
 
 <br/>
