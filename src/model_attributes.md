@@ -15,7 +15,7 @@ This is a list of Attributes you can add to your welds model to help control how
 Link a model to a table.  
 If a model is a one-to-one, or a subset of a table, add this on to it so that You can query directly off of the model.
 
-### Readonly
+### Readonly (model level)
 ```rust
 #[welds(readonly)]
 ```
@@ -63,6 +63,13 @@ This is needed for:
 #[welds(rename="new_name")]
 ```
 Add This to a field when the field's name doesn't match the name in the database
+
+### Readonly (field level)
+```rust
+#[welds(readonly)]
+```
+Mark a field as being readonly. This prevents a single field from being written back to the database. 
+The field is read from the database but not written. Useful for calculated columns. 
 
 ### Ignore
 ```
