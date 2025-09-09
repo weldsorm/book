@@ -55,7 +55,16 @@ You can now insert your data with a call to `bulk_insert`
 ```
 
 
+# Bulk Insert - Advanced Options
+
+There are a couple extra, options for inserting into databases. They allow for overriding of the tablename.
+These can be extremely useful when importing data or using a temp table. 
+They don't contain "rust unsafe" code, but are labeled as unsafe because they to NOT protect from SQL injection. 
+It goes without saying, don't expose the tablename to a user.
 
 
+`bulk_insert_override_tablename_unsafe`
+and 
+`bulk_insert_with_ids_override_tablename_unsafe`
 
-
+These two function work just like there safe counterparts, but allow manual setting of the tablename.

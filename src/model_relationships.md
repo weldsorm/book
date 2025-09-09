@@ -116,3 +116,44 @@ pub struct Image {
 <br/>
 
 
+### 4. ManualRelationship
+
+```rust
+#[welds(ManualRelationship(image, Image, "uid", "user_id"))]
+```
+
+Sometimes it is necessary to have full control over the relationship. 
+A good example of this is if you want to join where both sides don't use the primary key.
+If you need to control the key on both sides, `ManualRelationship` is what you are looking for.
+
+- **Name** (first parameter): The name of the relationship (e.g., image).
+- **Target model** (second parameter): The model to link to (e.g., Image).
+- **Self Key** (third parameter): The column on your side `self` of the relationship. 
+- **Other Key** (fourth parameter): The column on the other side of the relationship. (column on other model)
+
+
+Example use case:
+
+```rust
+#[derive(welds::WeldsModel)]
+#[welds(table = "users")]
+#[welds(ManualRelationship(images, Image, "uid", "user_id"))]
+pub struct User {
+    #[welds(primary_key)]
+    pub uid: i32,
+    pub name: String,
+}
+```
+
+```rust
+#[derive(welds::WeldsModel)]
+#[welds(table = "images")]
+#[welds(ManualRelationship(user, User, "user_id", "uid"))]
+pub struct Image {
+    #[welds(primary_key)]
+    pub id: i32,
+    pub user_id: i32,
+    pub url: String,
+}
+```
+
