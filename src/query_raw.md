@@ -63,7 +63,7 @@ Running the raw SQL and mapping into your struct
 ```rust
     use welds::prelude::*;
     let client = welds::connections::connect(connection_string).await?;
-    let rows = client.execute("select id from cars", &[]).await?;
+    let rows = client.fetch_rows("select id from cars", &[]).await?;
     let cars: Vec<Car> = rows.collect_into()?;
 ```
 
