@@ -46,3 +46,18 @@ cargo add tiberius --features="chrono"
 cargo add welds-connections --features="mssql,sqlite,mssql-chrono"
 ```
 
+## Synchronous calling Welds
+Welds can also be build and ran for synchronous calls using rusqlite as a backend. 
+The calls to welds are exactly the same except you don't need a async runtime and don't need to call `await`.
+This can be useful if you are creating an ultra lite-weight application, or can't use `async` and `await` for whatever reason.
+
+NOTE:
+Synchronous welds is only currently supported using sqlite with rusqlite under the hood.
+
+
+### Welds compiled for synchronous Sqlite using rusqlite
+```bash
+cargo add welds --features=sqlite-sync,sqlite-sync-bundled
+```
+
+

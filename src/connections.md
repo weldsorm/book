@@ -16,7 +16,7 @@ let client = welds::connections::connect(connection_string).await?;
 
 A couple important things to understand about the client.
 
-1) Client is an `Arc<>` feel free to call `clone()` on it as much as you want.
+1) Client is an `Arc<>`. Feel free to call `clone()` on it as much as you want.
 2) Client is a Connection Pool. It contains multiple connections and will handle sharing this resource for you.
 
 

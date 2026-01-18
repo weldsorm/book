@@ -60,10 +60,13 @@ struct PlayerInfo {
 let player_query = Player::where_col(|p| p.goals.gt(3) );
 let info_query = player_query
   .select(|p| p.name )
-  .select(|p| p.number);
+  .select_as(|p| p.number, "jersey_number");
 
 let infos: Vec<PlayerInfo> = info_query.run(&client).await?.collect_into()?;
 ```
+
+Note: in this example Player has a column `number`, but in our output model we want to call it `jersey_number`. 
+We can support this by renaming the column as it is being selected from the database using `select_as`.
 
 ## With more data (Joining table)
 
@@ -91,6 +94,7 @@ let player_query = Player::where_col(|p| p.goals.gt(3) );
 
 let info_query = order_query
     .select_as(|x| x.name, "player_name")
+    .select(|x| x.number)
     .join( |p| p.team, Team::select_as(|p| p.name, "team_name") );
 
 let infos: Vec<PlayerInfo> = info_query.run(&client).await?.collect_into()?;
